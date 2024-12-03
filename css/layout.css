@@ -1,0 +1,184 @@
+/******************** layout.css **************************/
+.wrapper_box{ border:0px solid purple; }
+.wrapper{ width:100%; margin:0 auto; border:0px solid gold; }
+
+/*header*/
+.header{ position:relative; }
+
+/*主視覺*/
+.header picture.visual img{ display:block; width:95%; height:auto; margin: auto; border:0px solid green; }
+/*直式*/
+@media screen and (orientation: portrait) {
+	.header{ margin-top:5%; }
+	.header picture.visual img{ margin-bottom:50px; }
+	.header picture.visual.s01 img{ margin-bottom:0px; }
+}
+
+/*logo_ettoday*/
+.header a.logo_ettoday{ width:12%; background:url(../images/logo_ettoday.png) no-repeat left top / 100% auto; 
+	position:absolute; left:50%; top:3%; transform:translate(-50%, 0%); border:0px solid green; }
+.header a.logo_ettoday::after{ content:""; display:block; width:100%; padding-bottom:22.4%; }
+.header a.logo_ettoday span{ display:none;/*隱藏字*/ }
+/*直式*/
+@media screen and (orientation: portrait) {
+	.header a.logo_ettoday{ width:32%; }
+}
+
+/*logo 香港人來了_首頁*/
+.header h1.logo_main{ width:35%; background:url(../images/logo_main.png) no-repeat left top / 100% auto; 
+position:absolute; left:50%; bottom:20%; transform:translate(-50%, 0%); border:0px solid skyblue; }
+.header h1.logo_main::after{ content:""; display:block; width:100%; padding-bottom:39.11%; }
+.header h1.logo_main span{ display:none;/*隱藏字*/ }
+
+/*logo 香港人來了_內頁*/
+.header h1.logo_main_2{ width:32%; background:url(../images/logo_main.png) no-repeat left top / 100% auto; 
+position: absolute; left: 25%; top: 24%; transform: translate(-50%, 0%); border:0px solid orangered;}
+.header h1.logo_main_2::after{ content:""; display:block; width:100%; padding-bottom:39.11%; }
+.header h1.logo_main_2 span{ display:none;/*隱藏字*/ }
+.header picture.visual img{ width:90%; }
+
+
+/*直式*/
+@media screen and (orientation: portrait) {
+	.header h1.logo_main{ width:80%; bottom:unset; top:15%; }
+	.header h1.logo_main_2{ width:80%; bottom:unset; left:50%; top:10%; }
+}
+
+/*footer=============================*/
+.footer{ margin-top:300px; }
+
+/*col_1======*/
+.footer .col_1{ padding-bottom:200px; background:url(../images/bg_footer_box.png) no-repeat center bottom / 100% auto; border:0px solid red; }
+
+/*直式*/
+@media screen and (orientation: portrait){
+	.footer .col_1{ padding-bottom:150px; background-image:url(../images/bg_footer_box_m.png); }
+}
+
+/*menu_1分享選單*/
+.footer .col_1 .menu_1{ width:150px; max-width:400px; margin:0 auto; margin-bottom:20px; border:0px solid gold; }
+.footer .col_1 .menu_1 h4{ margin-bottom:10px; font-size:24px; text-align:center; }
+.footer .col_1 .menu_1 ol{ text-align:center; }
+.footer .col_1 .menu_1 ol li{ display:inline-block; width:40px; height:40px; background:url(../images/icon_1.png) no-repeat no-repeat left center/100% auto; 
+background-size:80px 80px; border:0px solid blue;}
+.footer .col_1 .menu_1 ol li a{ display:block; width:100%; height:100%; overflow:hidden; opacity:0; }
+
+/*menu_1分享icon*/
+.footer .col_1 .menu_1 ol li.line{ background-position:0px 0px; }
+.footer .col_1 .menu_1 ol li.fb{ background-position:-40px 0px; }
+
+/*hover*/
+.footer .col_1 .menu_1 ol li.line:hover{ background-position:0px -40px; }
+.footer .col_1 .menu_1 ol li.fb:hover{ background-position:-40px -40px; }
+
+/*製作團隊*/
+.footer .col_1 ul{ width:100%; max-width:400px; margin:0 auto; border:0px solid gold; }
+
+/*直式*/
+@media only screen and (orientation: portrait){
+	.footer .col_1 ul{ width:80%; }
+}
+.footer .col_1 ul li{ margin-bottom:20px; }
+.footer .col_1 ul li strong{} 
+.footer .col_1 ul li em{}
+
+
+/*col_2======*/
+.footer .col_2{ background:#1e4154; border:5px solid transparent; }
+
+/*FB留言*/
+.footer .col_2 .social_box{ width:100%; max-width:600px; min-height:200px; margin:0 auto; margin-bottom:20px; border:0px solid green; }
+
+/*menu_2分享選單*/
+.footer .col_2 .menu_2{ width:100%; max-width:600px; margin:0 auto; border:0px solid red; margin-bottom:60px; }
+.footer .col_2 .menu_2 h4.logo_ettoday{ width:25%; height:50px; float:left; background:url(../images/logo_ettoday.png) no-repeat left center/100% auto; 
+filter:grayscale(1) brightness(100); }
+.footer .col_2 .menu_2 h4.logo_ettoday a{ display:block; width:100%; height:100%; opacity:0; }
+.footer .col_2 .menu_2 ol{ float:right; border:0px solid orange; }
+.footer .col_2 .menu_2 ol li{ display:inline-block; width:34px; height:34px; background:url(../images/icon_2.png) no-repeat ; background-size:200px 100px; border:0px solid blue; }
+.footer .col_2 .menu_2 ol li a{ display:block; width:100%; height:100%; overflow:hidden; opacity:0; }
+
+/*直式*/
+@media only screen and (orientation: portrait){
+	.footer .col_2 .menu_2{ display:flex; flex-direction:column; align-items:center }
+	.footer .col_2 .menu_2 ol{ margin-bottom:40px; }
+	.footer .col_2 .menu_2 h4.logo_ettoday{ order:2; }
+}
+
+/*link*/
+.footer .col_2 .menu_2 ol li.fb{ background-position:0px 0px; }
+.footer .col_2 .menu_2 ol li.line{ background-position:-33px 0px; }
+.footer .col_2 .menu_2 ol li.ig{ background-position:-66px 0px; }
+.footer .col_2 .menu_2 ol li.weibo{ background-position:-99px 0px; }
+
+/*hover*/
+.footer .col_2 .menu_2 ol li.fb:hover{ background-position:0px -33px; }
+.footer .col_2 .menu_2 ol li.line:hover{ background-position:-33px -33px; }
+.footer .col_2 .menu_2 ol li.ig:hover{ background-position:-66px -33px; }
+.footer .col_2 .menu_2 ol li.weibo:hover{ background-position:-99px -33px; }
+
+/*版權*/
+.footer .col_2 p{ width:100%; max-width:600px; margin:0 auto; margin-bottom:20px; text-align:left; color:#fff; border:0px solid darkred; }
+
+/*直式*/
+@media only screen and (orientation: portrait){
+	.footer .col_2 p{ text-align:center; }
+}
+
+/* btn_nav_11_switch 選單開關按鈕 ============== */
+.btn_nav_11_switch{ width:40px; height:40px; cursor:pointer; position:absolute; right:15px; top:15px; position:fixed; z-index:400; border:0px solid red; }
+
+/*直式*/
+@media screen and (orientation: portrait) {
+	.btn_nav_11_switch{ right:10px; top:10px; }
+}
+
+.btn_nav_11_switch .icon{ display:block; width:100%; height:4px; background:#293a4c; border-radius:2px; 
+position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); transition:0.3s linear; }
+
+.btn_nav_11_switch .icon::before,
+.btn_nav_11_switch .icon:after{ content:""; display:block; width:100%; height:100%; background:#293a4c; border-radius:2px; 
+position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); transition:0.3s linear;}
+.btn_nav_11_switch .icon::before{ transform:translate(-50%,calc(-50% - 10px)); }
+.btn_nav_11_switch .icon::after{ transform:translate(-50%,calc(-50% + 10px)); }
+
+/*.active*/
+.btn_nav_11_switch.active .icon{ background:rgba(200,0,0,0); }
+.btn_nav_11_switch.active .icon::before{ transform:translate(-50%,-50%) rotate(-45deg); }
+.btn_nav_11_switch.active .icon::after{ transform:translate(-50%,-50%) rotate(45deg); }
+
+/*nav_11 定位 ===================*/
+.nav_11{ display:none;/*初始隱藏*/ width:100%; height:100vh; background:#ccc; position:fixed; left:0; top:0; z-index:200; border:0px solid skyblue; }
+
+/*inner 滾動*/
+.nav_11 .inner{ width:90%; height:90vh; padding:20px; background:#cccc; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); 
+	display:flex; flex-wrap:wrap; justify-content:space-between; align-content:flex-start; border:0px solid orangered; }
+
+/*直式*/
+@media screen and (orientation: portrait) {
+	.nav_11 .inner{ width:100%; height:100vh; overflow:auto; border:0px solid orange; }
+}
+
+/*piece*/
+.nav_11 .inner .piece{ width:24%; margin-bottom:20px; position:relative; border:0px solid yellowgreen; }
+
+/*直式*/
+@media screen and (orientation: portrait) {
+	.nav_11 .inner .piece{ width:100%; }
+}
+
+/*圖組*/
+.nav_11 .inner .piece p.pic{ --r:0deg; margin-bottom:20px; position:relative; transform:rotate(var(--r)); transition:.3s; border:0px solid gold; }
+
+/*框*/
+.nav_11 .inner .piece p.pic::after{ content:""; display:block; width:100%; padding-bottom:70.36%; position:relative; z-index:2; 
+	 background:url(../images/nav_frame.png) no-repeat left top / 100% auto; }
+.nav_11 .inner .piece p.pic:hover{ --r:0deg!important; }
+.nav_11 .inner .piece p.pic img{ display:block; width:77%; height:78%; object-fit:cover; position:absolute; left:16%; top:13%; transform:scale(1.08); 
+transition:.3s; border:0px solid red;}
+.nav_11 .inner .piece p.pic:hover img{ transform:scale(1); }
+
+/*標題*/
+.nav_11 .inner .piece h4{ text-align:center; color:#33414e; line-height:1.5; text-decoration:none; border:0px solid blue; }
+.nav_11 .inner .piece:hover h4{ color:#195fff; }
+

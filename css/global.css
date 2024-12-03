@@ -1,0 +1,42 @@
+/******************** global.css **************************/
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap');
+
+body{ background:#cfcfcf;  overflow-x:hidden; }
+body *{ line-height:1.2; color:#003266; font-family:"Noto Sans TC","微軟正黑體",'Noto Serif TC',"sans-serif"; }
+/*h標題設定*/
+h1{ font-size:26px; font-weight:900; font-family:"微軟正黑體",serif; background:#fff; }
+h2{ font-size:32px; font-weight:900; font-family:"Noto Serif TC",serif; }
+h3{ font-size:22px; font-weight:900; font-family:"Noto Serif TC",serif; }
+h4{ font-size:16px; font-weight:900; font-family:"微軟正黑體",serif; }
+h5{ font-size:16px; font-weight:500; letter-spacing:1px; color:dimgray; }
+.piece .story p{ font-size:19px; letter-spacing:1.5px; }
+table{ font-size:21px; }
+
+/*直式*/
+@media screen and (orientation: portrait) {
+	h2{ font-size:25px; }
+	.piece .story p{ font-size:20px; letter-spacing:1.5px; }
+}
+/*樣式歸零*/
+ol,ul{ list-style:none; }
+table{ border-collapse:collapse; }
+
+/*預設連結狀態*/
+a:link,a:visited{ color:#293a4c; text-decoration:none; }
+a:hover,a:active{ color:#2b6ea5; text-decoration:underline; }
+
+/*footer 字型*/
+strong{ font-family:"Noto Serif TC",serif; font-weight:900; }
+em{ font-family:"Noto Serif TC",serif; font-style:normal; }
+span{ font-family:"Noto Serif TC",serif; }
+
+/*goToTop*/
+button.goToTop{ width:44px; height:44px; background:rgba(0,0,0,.5); position:fixed; right:20px; bottom:-80px; z-index:500; cursor:pointer; border:0px solid red; }
+button.goToTop::before{ content:""; display:block; width:20px; height:20px; border-top:2px solid #fff; border-left:2px solid #fff; position:absolute; left:50%; top:50%; transform:translate(-50%,-20%) rotate(45deg); }
+button.goToTop.active{ bottom:20px; transition:.3s; }
+button.goToTop:hover{ background:rgba(0,0,0,1); }
+
+/*模糊字*/
+.text_blur{ font-size:var(--fz); filter:blur(1px); transform:scale(var(--sc)) translate(var(--x),var(--y)); position:relative; z-index:10; color:#293a4c; opacity:0.6; }
+

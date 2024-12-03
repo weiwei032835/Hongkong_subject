@@ -1,0 +1,407 @@
+/******************** block.css **************************/
+/* title_1 萬用標====== */
+.title_1{ line-height:3.5; text-align:justify; letter-spacing:2px; }
+
+/*螢光筆*/
+.title_1 strong{ padding:5px 34px 7px 10px; background-image:linear-gradient( 115deg,#143755 0%,#143755 80%,#788d9f calc(80% + 1px),#788d9f 100%); 
+font-size:18px; color: white; }
+.title_1 span{ font-size:18px; background:#788d9f; padding:5px 20px 8px 0px; }
+
+.title_1 span a{ font-family: "Noto Serif TC", serif; color: white; }
+
+/* title_2 萬用標 =====*/
+.title_2{ margin-bottom:30px; padding:6px; background:#283D51; text-align:center; color:white; font-size:24px; font-weight:700; letter-spacing:3px; position:relative; }
+.title_2::after{ content:""; display:block; width:0px; height:0px; border:8px solid red; 
+border-color:#283D51 transparent transparent #283D51; position:absolute; left:-0.1%; top:95%; 
+transform:skewX(50deg); transform-origin:top;}
+
+/* title_3 萬用標 =====*/
+.title_3{ font-size:20px; text-align:center; }
+
+/*part_list_1 一欄式排版===============*/
+.part_list_1{ width:100%; max-width:1000px; margin:0 auto; margin-bottom:40px; border:0px solid pink; }
+.part_list_1 .piece{ border:0px solid olive; margin-bottom: 80px;}
+.part_list_1 .piece .story{ width:75%; margin:0 auto; }
+.part_list_1 .piece .story h2{ margin-bottom:45px;}
+.part_list_1 .piece .story p{ margin-bottom:20px; letter-spacing:2; }
+.part_list_1 .piece .pic{ width:100%; margin:0 auto; padding: 40px 40px 40px 40px; border:0px solid pink; }
+.part_list_1 .piece h5{ margin-bottom: 20px; text-align: center;}
+.part_list_1 .piece .pic img{ display: block; width:100%; height:auto; margin-bottom: 20px; }
+/*直式*/
+@media screen and (orientation:portrait){ 
+	.part_list_1{width:80%; }
+	.part_list_1 .piece .pic{ width:100%; padding: 0px;border:0px solid pink; }
+	.part_list_1 .piece .story{width:100%; }
+}
+
+/*part_list_2 兩欄式模糊邊緣===============*/
+.part_list_2{ width:100%;  max-width:1000px; margin:0 auto;  border:0px solid pink; }
+.part_list_2 .piece{ margin-left:52%; padding:20px; position:relative;  border:0px solid blue; }
+.part_list_2 .piece::after{ content:""; display:block; width:100%; height:100%; background:#fff; position:absolute; left:0; top:0; 
+	transform:scale(1.2); filter: blur(15px); opacity:.9; }
+
+/*直式*/
+@media screen and (orientation:portrait){ 
+.part_list_2{ width: 95%;}
+.part_list_2 .piece{ width: 85%; margin:auto; }
+.part_list_2 .piece::after{ transform:scale(1); filter: blur(6px); opacity:.8; }
+}
+
+/*part_list_3 兩欄式=================*/
+.part_list_3{ width:100%; max-width:1000px; margin:0 auto; position:relative; border:0px solid green; }
+.part_list_3 .piece{ display:flex; flex-wrap:wrap; justify-content:space-between; align-content:flex-start; border:0px solid blue; }
+.part_list_3 .piece .col_1{ width:48%; padding:40px 0px 0px 0px; border:0px solid transparent; }
+.part_list_3 .piece .col_1 img{ display:block; width:100%; height:auto; }
+.part_list_3 .piece .col_2{ width:48%; padding:30px 10px; display:flex; flex-direction:column; 
+	justify-content: center; align-items:start; border:0px solid green; }
+
+
+/*直式*/
+@media screen and (orientation: portrait){
+	.part_list_3 { width:100%; }
+	.part_list_3 .piece .col_1{ width:90%; margin: auto; }
+	.part_list_3 .piece .col_2{ width:100%; padding: 8%; }
+}
+
+
+/*.story 萬用內文 =====*/
+.story{ margin-bottom:20px; position:relative; z-index:2; }
+.story h2{ margin-bottom:25px;}
+.story h5{ position:relative; }
+.story p{ margin-bottom:20px; line-height:1.9; letter-spacing:2;}
+
+
+/*video_box 滿版影片=================*/
+.video_box{ width:70%; position:relative; margin:auto; border:0px solid red; }
+.video_box::after{ display:block; content:""; width:100%; padding-bottom:56%; }
+.video_box iframe{ display:block; width:100%; height:100%; position:absolute; }
+
+/*video_box_1 滿版影片=================*/
+.video_box_1{ width: 100%; height: 100%; overflow: hidden; }
+.video_box video{ width: 100%; height: 100%; object-fit: cover;}
+
+/*直式*/
+@media screen and (orientation: portrait){
+	.video_box{ width:100%; position:relative; margin:auto; border:0px solid pink; }
+	}
+
+/*表格資料1 */
+.sheet_1{ max-width:500px; margin:auto; border:0px solid pink;}
+.sheet_1 table{ width:100%; margin-bottom:20px; border:0px solid skyblue; }
+
+/*375px*/
+@media only screen and (max-width:375px){
+	.sheet_1 h3{ font-size:15px; }
+}
+
+.sheet_1 h5{ text-align:center; }
+.sheet_1 p{ margin-bottom:10px; text-align:right; font-size:14px; font-weight:300; }
+.sheet_1 td{ text-align:center; padding:10px; border-bottom:2px dashed #283D51; }
+.sheet_1 td:nth-child(3n+1){ width:25%; background:#BCC8CC; }
+.sheet_1 td:nth-child(3n+2){ width:40%; background:#CED5D8; }
+.sheet_1 td:nth-child(3n+3){ width:35%; background:#BCC8CC; }
+
+
+/* 表格資料2  */
+.sheet_2{ max-width:500px; margin:auto; border:0px solid gold; }
+.sheet_2 table{ width:100%; margin-bottom:20px; border-collapse: collapse; border:0px solid skyblue; }
+.sheet_2 h3{ font-size:22px; font-weight:700; letter-spacing:3px; position:relative; padding:6px; text-align:center; background:#283D51; color:white; }
+.sheet_2 h3::after{ content:""; display:block; width:0px; height:0px; border-color:#283D51 transparent transparent #283D51; 
+transform: skewX(50deg); position: absolute; transform-origin: top; left:1.8%; top:95%; border: 0px solid red;}
+.sheet_2 h5{ text-align:center; }
+.sheet_2 p{ text-align:right; font-size:14px; margin:10px 0 10px 0; font-weight:300; }
+.sheet_2 table td { padding:10px; text-align: center; border-bottom:2px dashed #283D51; }
+.sheet_2 table tr:first-child td:nth-child(1){ background:#BCC8CC; }
+.sheet_2 table tr:first-child td:nth-child(2){ background:#CED5D8; }
+.sheet_2 table tr:first-child td:nth-child(3){ background:#BCC8CC; }
+.sheet_2 table tr:last-child td:nth-child(1){ background:#BCC8CC; }
+.sheet_2 table tr:last-child td:nth-child(2){ background:#CED5D8; }
+.sheet_2 table tr:last-child td:nth-child(3){ background:#BCC8CC; }
+
+
+/*圖表 香港淨移出人口統計*/
+.chart_1{ width:100%; max-width:800px; height:500px;/*必需*/padding:20px; background:#cecece; border:0px solid grey; }
+.chart_1 canvas{ }
+
+/*圖表 港澳配偶與本國人結婚人數*/
+.chart_2{ width:100%; max-width:800px; height:500px;/*必需*/ padding:10px; background:#cecece; border:0px solid grey; }
+.chart_2 canvas{ }
+
+/*圖表 台灣是否應該保護和歡迎香港人來台*/
+.chart_3{ width:100%; max-width:800px; height:500px; margin:0 auto; border:0px solid grey; }
+.chart_3 canvas{ } 
+/*直式*/
+@media screen and (orientation: portrait){
+	.chart_3{ width:100%; max-width:800px; height:300px; margin:0 auto; margin-bottom:20px; border:0px solid grey; }
+	}
+/*圖表 香港來台旅客總人次變化*/
+.chart_4{ width:100%; max-width:800px; height:500px;/*必需*/ padding:10px; background:#cecece; margin-bottom:20px; border:0px solid grey; }
+.chart_4 canvas{ }
+/*圖表 香港居民來台居留、定居人數統計表*/
+.chart_5{ width:100%; max-width:800px; height:500px;/*必需*/ padding:10px; background:#cecece; border:0px solid grey; }
+.chart_5 canvas{ }
+
+/*小飛機*/
+.fly{ width:100%; max-width:641px; height:68px; background:url(../images/icon_place.png) no-repeat left center/ 100% auto; position:relative; z-index:20; 
+border:0px solid green; }
+.fly .inner{ width:50px; height:50px; background:url(../images/icon_air.png) no-repeat center center/auto 100%; position:absolute; left:0%; top:0%; border:0px 
+solid red; }
+
+/*外掛 scrollTrack 進度條 模組 */
+.scrollTrack{ background:#626262; width:100%; height:5px; position:fixed; left:0; top:0; z-index:500; }
+.scrollTrack .inner{ width:80%; height:100%; background-image:linear-gradient(to right,skyblue,#9dcbf5); 
+box-shadow:0px 0px 5px rgba(255,255,255,0.5),0px 0px 20px rgba(255,255,255,0.5); animation:ani_1 5s linear infinite;}
+
+/*area =============================*/
+.area{ position:relative; }
+
+
+/*area_a1 逃犯條例 =================*/
+.area_a1{ background:url(../images/index_1.png) no-repeat; background-size:100% auto; }
+.area_a1 .part_list_2{ padding:200px 0 200px 0px; }
+
+/*1800px*/
+@media only screen and (min-width:1800px){ 
+	.area_a1{background-image:url(../images/index_1_1920.png);}
+}
+/*直式*/
+@media screen and (orientation: portrait){
+	.area_a1{ background-image:url(../images/index_1m.png); background-position:left bottom; }
+	.area_a1 .part_list_2{padding:0px 0px 450px 0px;}
+	.area_a1 .part_list_2 .text_blur{ display:none;}
+	.area_a1 .part_list_2 .piece::after{ display:none;}
+}
+
+/*area_a2 香港淨移出人口 =================*/
+.area_a2{ border:0px solid deeppink; }
+.area_a2 .part_list_3 .piece{ padding:100px 0 100px 0; }
+.area_a2 .part_list_3 .title_2{ width:70%; margin:0 auto; }
+
+/*直式*/
+@media screen and (orientation:portrait){ 
+	.area_a2 .part_list_3 .title_2{ width:90%; margin:0 auto; }
+	.area_a2 .part_list_3 .piece{ padding:0px; }
+}
+
+/*area_a3 三場運動後的離開 =================*/
+.area_a3{ background:url(../images/index_2_1920.png) no-repeat; background-size:100% auto; border:0px solid deepskyblue; }
+.area_a3 .part_list_2{ padding:150px 0px 150px 0px; }
+
+/*直式*/
+@media screen and (orientation: portrait){
+	.area_a3{ background-image:url(../images/index_2m.png); }
+	.area_a3 .part_list_2{ padding:455px 0px 35px 0px; }
+	.area_a3 .part_list_2 .text_blur{ display:none; }
+}
+
+/*area_a4 來台堪比大作戰 =================*/
+.area_a4{ background:url(../images/index_3.png) no-repeat; background-size:100% auto; border:0px solid deepskyblue; }
+.area_a4 .part_list_2{ padding:150px 0px 150px 0px; }
+.area_a4 .part_list_3{ }
+
+/*1000px*/
+@media only screen and (min-width:1800px){
+	.area_a4{ background-image:url(../images/index_3_1920.png); }
+}
+/*直式*/
+@media screen and (orientation: portrait){
+	.area_a4{ background-image:url(../images/index_3_m.png); }
+	.area_a4 .part_list_2{ padding:80% 0 0 0; }
+	.area_a4 .part_list_2 .piece::after{ height:97%; left:0px; top:0%; }
+}
+
+/*area_a5 =================*/
+/*香港藝人「移居台灣」*/
+/*海外堡壘銅鑼灣書店*/
+/*動漫妹邂逅台式暖男*/
+.area_a5{ border:0px solid deeppink; }
+.area_a5 .part_list_3 .piece{ margin-bottom:350px; }
+.area_a5 .part_list_3 .piece .col_1 .title_2{ width:80%; margin:auto; }
+.area_a5 .part_list_3 .piece .col_1 .chart_2{ padding:40px 0px 0px 0px; }
+
+/*直式*/
+@media screen and (orientation:portrait){ 
+	.area_a5 .part_list_3 .piece{ margin-bottom:0px; }
+	.area_a5 .part_list_3 .piece .col_1{ width:88%; padding:0px; }
+	.area_a5 .part_list_3 .piece .col_1 .title_2{ width:95%; font-size:20px; margin:auto; }
+	.area_a5 .part_list_3 .piece .col_1 .chart_2{ }
+}
+
+/*area_a6=================*/
+/*獅子山*/
+.area_a6{ background:url(../images/index_7.png) no-repeat; background-size:100% auto; border:0px solid deepskyblue; }
+.area_a6 .part_list_2 .piece::after{ width:110%; left:-30px; transform:scale(1.1); }
+.area_a6 .part_list_2 .fly{ display:none; }
+
+/*黃宗儀*/
+.area_a6 .part_list_2{ margin-bottom:50px; padding:200px 0px 100px 0px; }
+
+/*直式*/
+@media screen and (orientation:portrait){ 
+	.area_a6{ background-image:url(../images/index_7m.png); }
+	.area_a6 .part_list_2{ padding:100% 0 0 0; }
+	.area_a6 .part_list_2 .piece{ width:80%; margin:auto; margin-bottom:20px; }
+	.area_a6 .part_list_2 .piece::after{ width:100%; height:87%; left:0px; top:3%; }
+	.area_a6 .part_list_2 .fly{ display:block; }
+}
+
+/*area_a7 香港異世代同求生=================*/
+.area_a7{ background:url(../images/index_9.png) no-repeat; background-size:100% auto; border:0px solid deepskyblue; }
+.area_a7 .part_list_2{ padding:200px 0 100px 0px; }
+.area_a7 .part_list_2 .piece::after{ transform:scale(1.1); }
+
+/*直式*/
+@media screen and (orientation: portrait){
+	.area_a7{ background-image:url(../images/index_9m.png); }
+	.area_a7 .part_list_2{ padding:410px 0px 0px 0px; }
+	.area_a7 .part_list_2 .piece::after{ height:92%; left:0px; top:3%; }
+	.area_a7 .part_list_2 .text_blur{ display:none; }
+}
+
+/*area_a8 攜手與前進=================*/
+.area_a8{ background:url(../images/index_10.png) no-repeat; background-size:100% auto;  border:0px solid deepskyblue; }
+.area_a8 .part_list_2{ padding:200px 0px 200px 0px; }
+
+/*1800px*/
+@media only screen and (min-width:1800px){
+	.area_a8{ background-image:url(../images/index_10_1920.png); }
+}
+/*直式*/
+@media screen and (orientation: portrait){
+	.area_a8{ background-image:url(../images/index_10m.png); }
+	.area_a8 .part_list_2{ padding:70% 0 0 0; }
+	.area_a8 .part_list_2 .piece .fly{ display:none; }
+}
+
+/*area_b1 銅鑼灣書店_林榮基=================*/	
+.area_b1{ background:url(../images/story1_2_1920.png) no-repeat; background-size:100% auto; border:0px solid blue; }
+/*直式*/
+@media screen and (orientation: portrait){
+	.area_b1{ background-image:url(../images/story1_2m.png); }
+}
+
+/*area_b2 回來之後=================*/	
+.area_b2{ background:url(../images/story1_5.png) no-repeat; background-size:100% auto; border:0px solid blue; }
+.area_b2 .part_list_1{ padding:52% 0 10% 0; }
+/*直式*/
+@media screen and (orientation: portrait){
+	.area_b2{ background-image:url(../images/story1_5m.png); }
+	.area_b2 .part_list_1{ padding:142% 0 10% 0; }
+}
+
+/*area_c2 香港藝人「移居台灣」Top 5=================*/
+.area_c1{ margin-bottom:100px; background:url(../images/story2_7.png) no-repeat; background-size:100% auto; background-position:center bottom; border:0px solid blue; }
+.area_c1 .part_list_1 .piece{ padding:0% 0 70% 0; }
+.area_c1 .part_list_1 .piece .story p:first-child{ margin-bottom:80px; }
+.area_c1 .part_list_1 .piece .pic{ margin-bottom:60px; }
+
+/*直式*/
+@media screen and (orientation: portrait){
+	 .area_c1{ background-image:url(../images/story2_7m.png); padding:0% 0 50% 0; }
+	 .area_c1 .part_list_1 .piece .pic{ margin-bottom:110px; }
+}
+
+/*area_d5 來台堪比大作戰=================*/
+.area_d1{ background:url(../images/story3_3.png) no-repeat; background-size:100% auto; background-position:left bottom; margin-bottom:40px; border:0px solid blue; }
+.area_d1 .part_list_1{ padding:0% 0 35% 0; border:0px solid yellow; }
+.area_d1 .part_list_1 .piece .pic{ width:80%; padding:80px 40px 60px 40px; }
+.area_d3{ background:url(../images/story3_6.png) no-repeat; background-size:100% auto; background-position:left bottom; margin-bottom:80px; ; border:0px solid blue; }
+.area_d3 .part_list_1{ padding:0% 0 55% 0; border:0px solid yellow; }
+.area_d4 .part_list_1 .sheet_4{ padding:70px 0 70px 0; border:0px solid yellow; }
+.area_d4 .part_list_1 .sheet_4 h3.title_2{ width:60%; margin:auto; margin-bottom:40px; }
+.area_d5 .part_list_1 .piece .pic{ width:60%; }
+.area_d6{ background:url(../images/story3_8.png) no-repeat; background-size:100% auto; background-position:left bottom; border:0px solid blue; }
+.area_d6 .part_list_1{ padding:5% 0 60% 0; border:0px solid yellow; }
+
+/*直式*/
+@media screen and (orientation: portrait){
+	.area_d1{ background-image:url(../images/story3_3m.png); padding:0 0 110% 0; }
+	.area_d1 .part_list_1 .piece .pic{ width:100%; padding:60px 0px 60px 0px; }
+	.area_d2 .part_list_1 .piece .pic{ width:100%; padding:50px 0px 20px 0px; }
+	.area_d3{ background-image:url(../images/story3_6m.png); padding:0 0 65% 0; margin-bottom:30px; }
+	.area_d4 .part_list_1 .sheet_4 h3.title_2{ width:100%; }
+	.area_d6{ background-image:url(../images/story3_8m.png); padding:0 0 55% 0; }
+	.area_d6 .part_list_1{ border:0px solid yellow; }
+}
+
+/*area_e5 動漫妹邂逅台式暖男=================*/
+.area_e1 .part_list_1 .piece .pic{ width:60%; }
+.area_e1{ background:url(../images/story4_2.png) no-repeat; background-position:left top; background-size:100% auto; margin-bottom:40px; border:0px solid blue; }
+.area_e1 .part_list_1 .piece .story p:first-child{ margin-bottom:50px; }
+.area_e2 .part_list_1{ padding:0% 0 55% 0; }
+.area_e2{ background:url(../images/story4_4.png) no-repeat; background-position:left bottom; background-size:100% auto; margin-bottom:0px; border:0px solid blue; }
+.area_e3 .part_list_1{ padding:0% 0 8% 0; }
+.area_e3{ background:url(../images/story4_6.png) no-repeat; background-position:left bottom; background-size:100% auto; margin-bottom:40px; border:0px solid blue; }
+
+/*直式*/
+@media screen and (orientation: portrait){
+	.area_e1{ background-image:url(../images/story4_2m.png); border:0px solid darkred; }
+	.area_e1 .part_list_1 .piece .pic{ width:100%; }
+	.area_e2{ background-image:url(../images/story4_4m.png); padding:0 0 55% 0; border:0px solid darkred; }
+	.area_e3{ background-image:url(../images/story4_6m.png); background-position:left bottom; border:0px solid darkred; }
+}
+
+/*area_f5 淡水冰室=================*/
+.area_f1{ background:url(../images/story5_2.png) no-repeat; background-position:left top; background-size:100% auto; margin-bottom:40px; border:0px solid blue; }
+.area_f1 .part_list_1 .piece .pic{ padding:80px 40px 60px 40px; }
+.area_f2{ background:url(../images/story5_5.png) no-repeat; background-position:left bottom; background-size:100% auto; border:0px solid blue; }
+.area_f2 .part_list_1{ padding:0% 0 40% 0; margin-bottom:0px; }
+.area_f4{ background:url(../images/story5_7.png) no-repeat; background-position:left top; background-size:100% auto; margin-bottom:40px; border:0px solid blue; }
+.area_f2 .part_list_1 .piece .pic{ width:65%; }
+.area_f4 .part_list_1 .piece .pic{ width:90%; margin-bottom: 80px;}
+
+
+/*直式*/
+@media screen and (orientation: portrait){
+	.area_f1{ background-image:url(../images/story5_2m.png); border:0px solid darkred; }
+	.area_f1 .part_list_1 .piece .pic{ padding:0px 0px 0px 0px; }
+	.area_f2{ background-image:url(../images/story5_5m.png); padding:0 0 95% 0; border:0px solid darkred; }
+	.area_f4{ background-image:url(../images/story5_7m.png); background-position:left center; border:0px solid darkred; }
+	.area_f4 .part_list_1 .piece .pic{ width:100%; }
+}
+
+/*area_g5 黃宗儀=================*/
+.area_g1{ background:url(../images/story6_2.png) no-repeat; background-position:left top; background-size:100% auto; margin-bottom:40px; border:0px solid blue; }
+.area_g2 .part_list_1 .piece { margin-bottom: 120px; }
+.area_g2 .title_2{ width:70%; margin:auto; }
+.area_g2 .part_list_1 .piece h5{ margin-bottom:70px; }
+.area_g2 .part_list_1 .piece .pic{ margin-bottom:20px; margin-top:20px; }
+.area_g3{ background:url(../images/story6_7.png) no-repeat; background-position:left top; background-size:100% auto; margin-bottom:40px; border:0px solid blue; }
+
+/*直式*/
+@media screen and (orientation: portrait){
+	.area_g1{ background-image:url(../images/story6_2m.png); background-position:left center; border:0px solid darkred; }
+	.area_g2 .title_2{ width:100%; }
+	.area_g3{ background-image:url(../images/story6_7m.png); background-position:left top; border:0px solid darkred; }
+}
+
+/*area_h2 炒房和國安=================*/
+
+/* 在台設籍前5名縣市 sheet_1圖表 */
+.area_h1 .part_list_1 .piece .sheet_1{ margin-bottom:80px; }
+.area_h1 .part_list_1 .piece .story .sheet_1 p{ margin-bottom:5px; }
+
+/* 前5名縣市面積 sheet_2圖表 */
+.area_h2 .part_list_1 .piece .sheet_2{ margin-bottom:80px; }
+.area_h2 .part_list_1 .piece .story .sheet_2 p{ margin-bottom:5px; }
+
+/* 歡迎香港人來台圓餅 chart_3 圖表 */
+.area_h4 .part_list_1 .piece .sheet_3{ margin-bottom:80px; margin-top:80px; }
+
+/* area_h1台灣熱 */
+.area_h1 .part_list_1 .piece .story{ margin-bottom:80px; }
+
+/* area_h2新北市最夯 bg */
+.area_h2{ background:url(../images/story7_2.png) no-repeat; background-position:left bottom; background-size:100% auto; margin-bottom:40px; border:0px solid blue; }
+.area_h2 .part_list_1{ padding:0% 0 35% 0; margin-bottom:0px; }
+.area_h2 .title_2{ width:70%; margin:auto; margin-bottom:20px; margin-top:80px; }
+.area_h2 .part_list_1 .sheet_2{ margin-bottom:40px; }
+.area_h4 .title_2{ width:70%; margin:auto; margin-bottom:40px; }
+.area_h4 .part_list_1 .chart_3{ margin-bottom:40px; }
+
+/*直式*/
+@media screen and (orientation: portrait){
+	.area_h2{ background-image:url(../images/story7_2m.png); background-position:left bottom; padding:0 0 95% 0; border:0px solid darkred; }
+	.area_h2 .title_2{ width:100%; margin:auto; margin-bottom:20px; margin-top:80px; }
+	.area_h4 .title_2{ width:100%; margin-bottom:60px; }
+}
